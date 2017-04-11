@@ -1,0 +1,224 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.71429;
+  background-color: #fff;
+}
+
+a {
+  color: #373B47;
+  text-decoration: none;
+}
+a:hover {
+  color: #E95853;
+}
+.link{
+  font-weight: 700;
+  padding: 21px;
+  display: inline-block;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.logo{
+  float: right; /*Logo al lado derecho*/
+}
+header{
+  position: fixed; /*Menu fijo*/
+  background: white;
+  width: 100%;
+  top: 0;
+}
+.menu{
+  padding: 14px 70px;
+  overflow: auto; /*scroll*/
+}
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.m-0 {
+  margin: 0px;
+}
+#home{
+  background-image: url(../img/bg-home.jpg);
+  background-position: center;/*posicionar la imagen al centro*/
+  background-repeat: no-repeat;/*no repetira nuestra imagen de fondo*/
+  background-size: cover;/*cubre todo el tamaño del contenedor*/
+  height: 554px;
+  text-align: center;
+  margin-top: 80px;
+}
+#home .container{
+  color: white;
+  padding: 70px;
+}
+.text-home{
+  font-size: 53px;
+}
+.btn-home{
+  background: #2ECC71; /*color de fondo*/
+  color: #fff; /*color dle texto*/
+  padding: 11px 20px; /*margen interior*/
+  border-radius: 1px; /*redondear bordes*/
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 63px;
+  display: inline-block;
+  font-size: 14px;
+}
+img {
+  vertical-align: middle;
+}
+
+.container {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.container:before, .container:after {
+    content: " ";
+    display: table;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container:after {
+    clear: both;
+}
+
+#services{
+  background-color: #F17C72;
+  text-align: center;/*aliniacion al centro*/
+  color: #fff;
+  padding: 70px 7px;
+}
+
+.box-services{
+  display: inline-block;
+  width: 30%;
+  margin-top: 63px;
+}
+
+.text-services{
+  font-size: 35px;
+  letter-spacing: 2px;/*espaciado entre cada letra*/
+}
+
+footer{
+  text-align: center;
+  height: 70px;
+  background: #373B47;
+  color: white;
+  padding-top: 7px;
+}
+
+#work{
+  text-align: center;/*aliniacion al centro*/
+  padding: 70px 7px;
+}
+
+.box-work{
+  display: inline-block;
+  width: 30%;
+  margin-top: 63px;
+}
+
+.text-work{
+  font-size: 35px;
+  letter-spacing: 2px;/*espaciado entre cada letra*/
+}
+.center{
+  text-align: center;
+}
+/*modal*/
+.myImg {
+    cursor: pointer;/*manito en la imagen*/
+    transition: 0.3s;
+}
+.myImg:hover {
+  opacity: 0.7;
+}
+/* modal fondo */
+.modal {
+    display: none; /* oculto */
+    position: fixed; /* mismo lugar */
+    z-index: 1000; /* aparezca encima */
+    padding-top: 19px; /* posicion del contenedor de la imagen */
+    left: 0;
+    top: 0;
+    width: 100%; /* Tamaño toda la pantalla */
+    height: 100%; /* Toda la pantalla */
+    background-color: rgba(55,188,119,0.9); /* color verde y opacidad */
+}
+/* contenedor de imagen de modal */
+.modal-content {
+    margin: auto;
+    border: 6px solid white;/*borde de la imagen*/
+    display: block;
+    width: 70%;/*tamaño*/
+    max-width: 700px;/*maximo tamaño*/
+}
+/* agregando animacion */
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* botton de cerrar */
+.close {
+    position: absolute;
+    right: 350px;
+    color: #37BC77;
+    font-size: 50px;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
